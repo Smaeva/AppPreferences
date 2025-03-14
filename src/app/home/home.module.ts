@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms'; // ✅ Required for ngModel
-import { IonicModule } from '@ionic/angular'; // ✅ Required for Ionic components
-
+import { IonicModule } from '@ionic/angular';
+import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
-import { RouterModule } from '@angular/router';
+
+import { HomePageRoutingModule } from './home-routing.module';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,  // ✅ Add this
-    IonicModule,  // ✅ Add this
-    RouterModule.forChild([{ path: '', component: HomePage }])
+    FormsModule,
+    IonicModule,
+    HomePageRoutingModule
   ],
   declarations: [HomePage]
 })
-export class HomePageModule { }
+export class HomePageModule {}
